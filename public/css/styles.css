@@ -1,0 +1,29 @@
+  html {
+    overflow: hidden !important;
+  }
+  .navbar-burger {
+    color: #dadada;
+  }
+  .navbar-burger.is-active {
+    color: #dadada;
+  }
+  .navbar .navbar-item a {
+    color: #dadada;
+    text-transform: uppercase;
+  }
+  .navbar-item i:hover {
+    color: #ff7bd4 !important;
+  }
+  .navbar .navbar-item a:hover {
+    color: #ff7bd4 !important;
+  }
+  .navbar-start a:hover {
+    color: #ff7bd4 !important;
+  }
+  .navbar-start a.is-active {
+    color: #ff7bd4 !important;
+  }
+  .hero-body {
+    position: relative;
+    z-index: 999;
+  }
