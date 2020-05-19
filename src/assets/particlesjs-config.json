@@ -1,14 +1,14 @@
 {
   "particles": {
     "number": {
-      "value": 256,
+      "value": 300,
       "density": {
         "enable": true,
         "value_area": 1000
       }
     },
     "color": {
-      "value": "#ff7bd4"
+      "value": "#dadada"
     },
     "shape": {
       "type": "circle",

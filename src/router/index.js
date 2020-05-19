@@ -27,6 +27,10 @@ Vue.use(VueRouter)
     path: '/contact',
     name: 'Contact',
     component: () => import('../views/Contact.vue')
+  },
+  {
+    path: '/facebook',
+    beforeEnter() {location.href = 'https://facebook.com'}
   }
 ]
 

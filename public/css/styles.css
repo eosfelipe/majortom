@@ -1,4 +1,10 @@
-  html {
+  @import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i&display=swap');
+  * , html {
+    /* color: #dadada; */
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    outline: none;
     overflow: hidden !important;
   }
   .navbar-burger {
@@ -12,18 +18,24 @@
     text-transform: uppercase;
   }
   .navbar-item i:hover {
-    color: #ff7bd4 !important;
+    color: #ff0042 !important;
+  }
+  .navbar-item:hover {
+    color: #ff0042 !important;
   }
   .navbar .navbar-item a:hover {
-    color: #ff7bd4 !important;
+    color: #ff0042 !important;
   }
-  .navbar-start a:hover {
-    color: #ff7bd4 !important;
+  .navbar-end a:hover {
+    color: #ff0042 !important;
   }
-  .navbar-start a.is-active {
-    color: #ff7bd4 !important;
+  .navbar-end a.is-active {
+    color: #ff0042 !important;
   }
   .hero-body {
     position: relative;
-    z-index: 999;
+    z-index: 1;
+  }
+  .hero-footer {
+    z-index: 2;
   }

@@ -2,6 +2,18 @@ import Vue from 'vue'
 import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
+import VueTypedJs from 'vue-typed-js'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFacebook, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faFacebook,faInstagram, faGithub);
+library.add(faEnvelope);
+
+Vue.component('font-awesome-icon', FontAwesomeIcon);
+
+Vue.use(VueTypedJs);
 
 Vue.config.productionTip = false
 
