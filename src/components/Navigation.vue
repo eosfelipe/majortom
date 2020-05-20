@@ -14,13 +14,14 @@
         </a>
       </div>
       <div class="navbar-menu" id="navbarMenu" :class="{'is-active':showNav}">
-        <div class="navbar-start is-hidden-desktop">
-          <router-link class="navbar-item" to="/" exact>Home</router-link>
-          <router-link class="navbar-item" to="/about">About</router-link>
-          <router-link class="navbar-item" to="/services">Services</router-link>
+        <!-- Only mobile -->
+        <div class="navbar-start is-hidden-desktop" v-if="routesNav[0].current == 1">
+          <router-link class="navbar-item" :to="routesNav[1].to" exact>{{routesNav[1].name}}</router-link>
+          <router-link class="navbar-item" :to="routesNav[2].to">{{routesNav[2].name}}</router-link>
         </div>
+        <!-- Only mobile -->
         <div class="navbar-end">
-          <div class="tabs is-right">
+          <div class="tabs is-right" v-if="routesNav[0].name == 'Home'">
             <a href="https://bulma.io" class="navbar-item">
               <img
                 src="https://bulma.io/images/made-with-bulma--white.png"
@@ -32,6 +33,10 @@
           </div>
         </div>
       </div>
+      <div class="tabs is-right is-hidden-mobile" v-if="routesNav[0].name != 'Home'">
+        <router-link class="navbar-item" :to="routesNav[1].to">{{routesNav[1].name}}</router-link>
+        <router-link class="navbar-item" :to="routesNav[2].to">{{routesNav[2].name}}</router-link>
+      </div>
     </div>
   </nav>
 </template>
@@ -39,6 +44,7 @@
 <script>
 export default {
   name: "Navigation",
+  props: ["routesNav"],
   data() {
     return {
       showNav: false
