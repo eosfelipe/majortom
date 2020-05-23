@@ -1,13 +1,15 @@
 <template>
-    <div id="app">
-        <router-view></router-view>
-    </div>
+  <div id="app">
+    <Loader/>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+import Loader from './components/Loader'
+export default {
+  components: Loader
+};
 </script>
 
 <style>

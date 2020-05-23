@@ -72,7 +72,7 @@ export default {
   },
   data() {
     return {
-      show: false,
+      showLoader: false,
       nav: [
         {
           name: "Home",

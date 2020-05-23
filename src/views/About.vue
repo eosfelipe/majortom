@@ -4,7 +4,9 @@
     <div id="scrollPath"></div>
     <section class="hero is-black is-bold">
       <div class="hero-head">
-        <Navigation :routesNav="nav.map(i => i)" />
+        <transition name="initPage" appear>
+          <Navigation :routesNav="nav.map(i => i)" />
+        </transition>
       </div>
       <div class="hero-body">
         <div class="container">
@@ -13,14 +15,10 @@
               <h2 class="destaque-text">Innovative experiences for forward-thinking brands.</h2>
             </div>
             <div class="column is-6">
-              <p
-                class="special-text"
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nemo pariatur blanditiis eos molestias dolorum enim ipsa suscipit quia laudantium expedita, nulla, vitae odit consectetur quidem reprehenderit accusamus eaque iure.</p>
-              <a
-                href="mailto:email@majortom.space"
-                id="hero-btn"
-                class="button is-dark is-inverted"
-              >Start a Project ></a>
+              <p class="special-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nemo pariatur blanditiis eos molestias dolorum enim ipsa suscipit quia laudantium expedita, nulla, vitae odit consectetur quidem reprehenderit accusamus eaque iure.
+              </p>
+              <a href="mailto:email@majortom.space" id="hero-btn" class="button is-dark is-inverted">Start a Project ></a>
             </div>
           </div>
         </div>
@@ -177,5 +175,22 @@ section p {
   background-color: #ff0042;
   color: whitesmoke;
   transition: all 0.5s ease;
+}
+.initPage-enter,
+.initPage-leave-to {
+  /* opacity: 0;
+  transform: rotateY(50deg); */
+  transform: translateX(50px);
+  opacity: 0;
+}
+.initPage-enter-to,
+.initPage-leave {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.initPage-enter-active,
+.initPage-leave-active {
+  /* transition: opacity, transform 200ms ease-out; */
+  transition: all 1s ease;
 }
 </style>
