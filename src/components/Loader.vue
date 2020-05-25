@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 let _loadingInterval = 0;
 
@@ -14,11 +14,11 @@ export default {
   data() {
     return {
       show: false,
-      text: ''
+      text: ""
     };
   },
   computed: {
-    ...mapGetters(['getLoading'])
+    ...mapGetters(["getLoading"])
   },
   methods: {
     showProgress(show) {
@@ -27,30 +27,29 @@ export default {
     start() {
       this.showProgress(true);
       _loadingInterval = setInterval(() => {
-        this.text = 'Loading';
-      }, 3000);
+        this.text = "Loading";
+      }, 1000);
     },
     stop() {
       clearInterval(_loadingInterval);
-      this.text = '100%';
+      this.text = "100%";
       setTimeout(() => {
         this.showProgress(false);
-      },3000);
+      }, 1000);
     }
   },
   watch: {
     getLoading(newValue, oldValue) {
       console.log(newValue);
-      if(newValue) {
-        console.log('start');
+      if (newValue) {
+        console.log("start");
         this.start();
-      }
-      else {
-        console.log('stop');
+      } else {
+        console.log("stop");
         this.stop();
       }
     }
-  },
+  }
 };
 </script>
 
@@ -62,7 +61,7 @@ export default {
   bottom: 0;
   left: 0;
   z-index: 9999;
-  background-color: whitesmoke;
+  background-image: linear-gradient(141deg, #000 0, #0a0a0a 71%, #181616 100%);
 }
 .preloader-circle {
   position: absolute;
@@ -73,10 +72,10 @@ export default {
   margin: -18px 0 0 -18px;
   border-radius: 50%;
   border: 2px solid;
-  border-top-color: rgba(0, 0, 0, 0.65);
-  border-bottom-color: rgba(0, 0, 0, 0.15);
-  border-left-color: rgba(0, 0, 0, 0.65);
-  border-right-color: rgba(0, 0, 0, 0.15);
+  border-top-color: rgb(255, 29, 94);
+  border-bottom-color: rgba(255, 29, 94, 0.15);
+  border-left-color: rgba(255, 29, 94, 0.65);
+  border-right-color: rgba(255, 29, 94, 0.15);
   -webkit-animation: atom-preloader-circle 0.8s linear infinite;
   animation: atom-preloader-circle 0.8s linear infinite;
 }

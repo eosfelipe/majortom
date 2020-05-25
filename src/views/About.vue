@@ -191,6 +191,6 @@ section p {
 .initPage-enter-active,
 .initPage-leave-active {
   /* transition: opacity, transform 200ms ease-out; */
-  transition: all 1s ease;
+  transition: all 3s ease;
 }
 </style>

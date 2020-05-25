@@ -25,12 +25,12 @@ const app = new Vue({
 }).$mount('#app');
 
 router.beforeEach((to, from, next) => {
-  app.$store.commit('setLoading', true)
+  app.$store.commit('setLoading', true);
 
   // Simulate request
   setTimeout(() => {
     next();
-  }, 1000)
+  }, 500);
   
 });
 

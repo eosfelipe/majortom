@@ -167,10 +167,10 @@ strong {
   color: #ff0042 !important;
 }
 .slide-fade1-enter-active {
-  transition: all 1s ease;
+  transition: all 2s ease;
 }
 .slide-fade2-enter-active {
-  transition: all 2s ease;
+  transition: all 3s ease;
 }
 .slide-fade-leave-active {
   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);

@@ -6,9 +6,17 @@
 </template>
 
 <script>
-import Loader from './components/Loader'
+import Loader from "./components/Loader";
 export default {
-  components: Loader
+  components: {
+    Loader
+  },
+  mounted() {
+    this.$store.commit("setLoading", true);
+    setTimeout(() => {
+      this.$store.commit("setLoading", false);
+    }, 500);
+  }
 };
 </script>
 
