@@ -19,14 +19,13 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/services',
-    name: 'Servives',
-    component: () => import('../views/Services.vue')
+    path: '/works',
+    name: 'Works',
+    component: () => import('../views/Works.vue')
   },
   {
-    path: '/contact',
-    name: 'Contact',
-    component: () => import('../views/Contact.vue')
+    path: '*',
+    component: () => import('../views/PageNotFound.vue')
   },
   {
     path: '/facebook',

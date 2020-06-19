@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <section id="particles" class="hero is-fullheight is-dark bg">
+    <section id="particles" class="hero is-fullheight is-dark bg" style="padding: 0;">
       <div class="hero-head">
         <Navigation :routesNav="nav.map(i => i)" />
       </div>
@@ -8,7 +8,7 @@
         <div class="container">
           <h1>
             <vue-typed-js
-              :strings="['Major Tom', 'Inteligencia Digital', 'Forget safety, be notorious']"
+              :strings="['Major Tom', 'Inteligencia digital', 'Forget safety', 'Dare to be']"
               :loop="true"
               :typeSpeed="100"
               :backDelay="5000"
@@ -26,7 +26,7 @@
           </transition>
           <transition name="slide-fade2" appear>
             <div class="tile is-child box box-custom">
-              <router-link class="right-item" to="/services">Services</router-link>
+              <router-link class="right-item" to="/works">Works</router-link>
             </div>
           </transition>
         </div>
