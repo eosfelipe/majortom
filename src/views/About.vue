@@ -35,7 +35,7 @@
         <div class="column is-6">
           <h2 class="destaque-text-invert">Digital Strategy</h2>
           <figure>
-            <img src="/img/ds_o.jpg" alt="">
+            <img src="/img/ds_o.jpg" alt="digital strategy">
           </figure>
           <div class="content">
             <p class="special-text-invert">
@@ -49,7 +49,7 @@
         <div class="column is-6">
           <h2 class="destaque-text-invert">Digital Production</h2>
           <figure>
-            <img src="/img/dp_o.jpg" alt="">
+            <img src="/img/dp_o.jpg" alt="digital production">
           </figure>
         </div>
       </div>
@@ -330,7 +330,12 @@ a#hero-btn span:nth-child(4) {
 #whatwedo {
   padding: 50px;
 }
-@media screen and (min-width: 325px) {
+@media (max-width: 800px) {
+  .destaque-text-invert {
+     font-size: 42px;
+  }
+}
+@media (max-width: 500px) {
   .destaque-text-invert {
      font-size: 36px;
   }

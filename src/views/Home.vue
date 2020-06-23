@@ -8,7 +8,7 @@
         <div class="container">
           <h1>
             <vue-typed-js
-              :strings="['Major Tom', 'Inteligencia digital', 'Forget safety', 'Dare to be']"
+              :strings="['Major Tom', 'Digital intelligence', 'Forget safety', 'Dare to be']"
               :loop="true"
               :typeSpeed="100"
               :backDelay="5000"
@@ -137,7 +137,7 @@ strong {
   height: 100% !important;
 }
 .bg {
-  background: url("../assets/dark_bg.jpg");
+  background: url("../assets/dark_bg_o.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
